@@ -1,18 +1,20 @@
+// src/App.jsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AddBook from "./components/AddBook";
 import Home from "./Home";
-import "./App.css";
+import AddBook from "./components/AddBook";
+import BookCard from "./components/BookCard";
 
-const App = () => {
+function App() {
   return (
-    <Router> {/* Wrap everything inside Router */}
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/add-book" element={<AddBook />} />
       </Routes>
     </Router>
   );
-};
+}
 
 export default App;
+
